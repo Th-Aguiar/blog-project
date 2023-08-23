@@ -1,0 +1,15 @@
+<%- include("partials/header"); -%>
+
+    <main class="main-post">
+        <div class="post-container bg-secondary">
+            <h1 class="text-center">Criar postagem</h1>
+            <hr>
+            <form method="post" action="/post" class="post-inputs">
+                <input class="p-2 form-control" type="text" name="postHeader" id="post-header" placeholder="Título da postagem">
+                <textarea class="form-control" name="postContent" id="post-content" cols="30" rows="5" placeholder="Digite Seu conteudo"></textarea>
+                <button class="btn btn-primary mt-3" type="submit">Postar</button>
+            </form>
+        </div>
+    </main>
+
+<%- include("partials/footer"); -%>

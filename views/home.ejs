@@ -1,5 +1,12 @@
-<%- include("header"); -%>
+<%- include("partials/header"); -%>
 <main>
-    <p> Teste de conteudo </p>
+    <div>
+        <% items.forEach( (object) => { %>
+            <div>
+                <h1> <%= object.postHeader %> </h1>
+                <p> <%= object.postContent %> </p>
+            </div>
+        <% }) %>
+    </div>
 </main>
-<%- include("footer"); -%>
+<%- include("partials/footer"); -%>
