@@ -1,12 +1,25 @@
 <%- include("partials/header"); -%>
-<main>
-    <div>
-        <% items.forEach( (object) => { %>
+<main class="main-home">
+
+        <!-- Loop de Renderização -->
+        <% posts.forEach( (object) => { %>
             <div>
-                <h1> <%= object.postHeader %> </h1>
-                <p> <%= object.postContent %> </p>
+                <h1> <%= object.postTittle %> </h1>
+                <p> <%= object.postContent.substring(0,50) + "..." %> </p>
+                <a href="/<%= object.postTittle %>" >Leia mais</a>
+            </div>
+
+            <!-- Testando card BootStrap-->
+            <div class="card ">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"> <%= object.postTittle %> </h5>
+                  <p class="card-text"> <%= object.postContent.substring(0,50) %> </p>
+                  <a href="/<%= object.postTittle %>" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
             </div>
         <% }) %>
-    </div>
+        
 </main>
 <%- include("partials/footer"); -%>
